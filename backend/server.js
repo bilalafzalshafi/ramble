@@ -36,7 +36,7 @@ app.post('/api/process', upload.single('audio'), async (req, res) => {
         const transcription = await transcribeAudio(req.file.path);
         console.log('Transcription:', transcription);
 
-        // Step 2: Make text coherent with Claude
+        // Step 2: Make text coherent with GPT
         const coherentText = await makeCoherent(transcription);
         console.log('Coherent text:', coherentText);
 
