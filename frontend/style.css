@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: white;
+    color: black;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    text-align: center;
+    max-width: 600px;
+    width: 90%;
+    padding: 2rem;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+    letter-spacing: -1px;
+}
+
+.tagline {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 3rem;
+    font-weight: 300;
+}
+
+.record-section {
+    margin-bottom: 3rem;
+}
+
+.record-btn {
+    width: 80px;
+    height: 80px;
+    border: 2px solid black;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.record-btn:hover {
+    background: #f5f5f5;
+}
+
+.record-btn.recording {
+    background: black;
+    animation: pulse 1.5s infinite;
+}
+
+.record-btn.processing {
+    border-color: #666;
+    cursor: not-allowed;
+}
+
+.record-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: black;
+    transition: all 0.2s ease;
+}
+
+.record-btn.recording .record-icon {
+    background: white;
+    border-radius: 4px;
+    width: 16px;
+    height: 16px;
+}
+
+.record-btn.processing .record-icon {
+    background: #666;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.status {
+    font-size: 0.9rem;
+    color: #666;
+    min-height: 1.2rem;
+}
+
+.output-section {
+    border-top: 1px solid #eee;
+    padding-top: 2rem;
+    text-align: left;
+}
+
+.output-section h3 {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    color: #666;
+}
+
+.output-text {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    line-height: 1.7;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
